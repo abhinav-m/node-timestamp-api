@@ -8,11 +8,15 @@
     <title>Timestampr</title>
 </head>
 <style>
-    body {
+    .container {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
+    }
+
+    div {
+        margin: 20px;
     }
 
     h1 {
@@ -30,6 +34,11 @@
         background: bisque;
         padding: 10px;
     }
+
+    .exampleOutput {
+        background: darkgray;
+        padding: 10px;
+    }
 </style>
 
 <body>
@@ -39,18 +48,33 @@
             <p>A simple api which parses unix timestamps and natural language dates</p>
         </div>
         <div class="exampleUsage">
-            <div>
-                <p>Example usage with date:
-                    <span> https://time-stampr.herokuapp.com/api/January%201%202018</span>
+
+            <p>Example usage</p>
+            <p>With date:
+
+                <span> https://time-stampr.herokuapp.com/api/January%201%202018
                     <a href='https://time-stampr.herokuapp.com/api/January%201%202018' target="_blank">Go!</a>
-                </p>
-                <p>Example usage with unix time stamp:
-                    <span>https://time-stampr.herokuapp.com/api/1514764800</span>
+                </span>
+            </p>
+
+            <p>Example usage with unix time stamp:
+                <span>https://time-stampr.herokuapp.com/api/1514764800
                     <a href='https://time-stampr.herokuapp.com/api/1514764800' target="_blank">Go!</a>
-                </p>
-            </div>
+                </span>
+
+            </p>
+
+
         </div>
-    </div>
+        <div class="exampleOutput">
+            <p>Example output</p>
+            <p>
+                { unix: 1514764800, natural: "January 1, 2018" }
+            </p>
+
+
+
+        </div>
 </body>
 
 </html>
